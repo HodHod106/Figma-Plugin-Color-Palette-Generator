@@ -1,0 +1,16 @@
+<h2>Frame Selection</h2>
+
+<button id="select-frame">Select Frame</button>
+<button id="create-palette">Create Palette</button>
+
+<script>
+
+document.getElementById('select-frame').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'select-frame'} }, '*');
+};
+
+document.getElementById('create-palette').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'create-palette'} }, '*');
+};
+
+</script>
